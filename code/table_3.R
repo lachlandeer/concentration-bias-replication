@@ -5,6 +5,7 @@ library(readr)
 library(dplyr)
 library(estimatr)
 library(modelsummary)
+library(rlist)
 
 # --- Load Data --- #
 df <- read_csv("out_data/consumption_experiment.csv")
@@ -80,3 +81,7 @@ models_ours <- list(
 )
 
 modelsummary(models_ours)
+
+out_list <- list(models, models_ours)
+
+list.save(out_list, "out_models/table3.Rds")

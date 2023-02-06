@@ -1,4 +1,7 @@
-# What we do?
+# compute_drel.R
+#
+# Compute our own version of relative concentration bias
+# from the choice data
 
 # --- libraries --- # 
 

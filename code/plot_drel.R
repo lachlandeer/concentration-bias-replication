@@ -1,3 +1,8 @@
+# plot_drel.R
+#
+# Plot comparisons between our version of drel (relative concentration bias)
+# and those of the original study
+
 library(ggplot2)
 library(readr)
 library(dplyr)

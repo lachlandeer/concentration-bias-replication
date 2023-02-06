@@ -1,3 +1,7 @@
+# table_2.R
+#
+# Replicates table 2 of DGRSS
+
 # --- libraries --- # 
 
 library(readr)
@@ -5,7 +9,7 @@ library(dplyr)
 library(estimatr)
 library(AER)
 library(modelsummary)
-
+library(rlist)
 
 # --- Load Data --- #
 df <- read_csv("out_data/consumption_experiment.csv")
@@ -88,3 +92,7 @@ models_rel <- list(
 )
 
 modelsummary(models_rel)
+
+out_list <- list(models, models_rel)
+
+list.save(out_list, "out_models/table2.Rds")

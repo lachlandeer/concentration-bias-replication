@@ -4,6 +4,7 @@ library(readr)
 library(dplyr)
 library(estimatr)
 library(broom)
+library(rlist)
 
 # --- Load Data --- #
 df <- read_csv("data/Money_Experiment.csv")
@@ -68,3 +69,6 @@ reg6 <- lm_robust(
 
 summary(reg6)
 glance(reg6)
+
+models <- list(reg1, reg2, reg3, reg4, reg5, reg6)
+list.save(models, "out_models/money_experiment.Rds")
