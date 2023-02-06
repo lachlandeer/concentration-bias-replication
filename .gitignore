@@ -3,3 +3,7 @@ out*
 .Rhistory
 .Rproj*
 *.Rproj
+.snakemake
+assets
+*.pdf
+logs
